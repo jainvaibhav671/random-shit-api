@@ -1,9 +1,12 @@
 const express = require("express");
 const io = require("socket.io");
+const cors = requrie("cors");
 
 const app = express();
 const server = app.listen(3000);
 const socket = io(server);
+
+app.use(cors());
 
 socket.on("connection", (socket) => {
   console.log("a user connected");
