@@ -1,6 +1,6 @@
 const express = require("express");
 const io = require("socket.io");
-const cors = requrie("cors");
+const cors = require("cors");
 
 const app = express();
 const server = app.listen(3000);
