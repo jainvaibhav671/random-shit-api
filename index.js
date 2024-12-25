@@ -4,7 +4,11 @@ const cors = require("cors");
 
 const app = express();
 const server = app.listen(3000);
-const socket = io(server);
+const socket = io(server, {
+  cors: {
+    origin: "*",
+  },
+});
 
 app.use(cors());
 
